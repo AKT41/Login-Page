@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/captiveportal-logo.-removebg-preview.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Edit By AKT</title>
 </head>
@@ -12,11 +13,13 @@
         
     <div class="login-page">      
         <div class="form">         
-          <form class="login-form">
+          <form method="post" action="$PORTAL_ACTİON$" class="login-form">
             <img class="logo" src="captiveportal-logo.-removebg-preview.png" alt="">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>login</button>
+            <input name="auth_user" type="text" placeholder="Username"/>
+            <input name="auth-pass" type="password" placeholder="Password"/>
+            <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+            <input name="zone" type="hidden" value="$PORTAL_ZONE$">
+            <input name="accept" value="Login" type="submit" class="log"/>
             <p class="message">Made with <a style="color: red;">♥ </a> by <b>AKT</b></p>
           </form>        
         </div>     
